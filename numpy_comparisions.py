@@ -35,3 +35,21 @@ print(np.all(x < 6)) #check if all the elements in matrix follows the condition
 #using some boolean opperators 
 print(np.sum(np.bitwise_and(inches > 0.5, inches < 1))) 
 print(np.sum(~((inches <= 0.5) | (inches >=1))))
+
+#masking arrays using boolean functions
+
+print(x[np.less(x,5)])
+rainy = np.greater(inches,0)
+
+days = np.arange(1,366)
+
+summer = np.greater(days,172) & np.less(days,262)
+
+print("Median precip on rainy days in 2014 (inches):   ",
+      np.median(inches[rainy]))
+print("Median precip on summer days in 2014 (inches):  ",
+      np.median(inches[summer]))
+print("Maximum precip on summer days in 2014 (inches): ",
+      np.max(inches[summer]))
+print("Median precip on non-summer rainy days (inches):",
+      np.median(inches[rainy & ~summer]))
