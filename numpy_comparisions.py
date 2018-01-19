@@ -13,3 +13,5 @@ rainfall  = pd.read_csv('data/Seattle2014.csv')
 inches = rainfall['PRCP'].values
 
 plt.hist(inches,40)
+
+x = np.arange(1,6)
