@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn; seaborn.set() 
 
 rainfall  = pd.read_csv('data/Seattle2014.csv')
-inches = rainfall['PRCP'].values
+inches = rainfall['PRCP'].values/254.0
 
 plt.hist(inches,40)
 
@@ -31,3 +31,7 @@ print(np.sum(x < 6, axis=1)) # on axis 1
 print(np.sum(x > 6, axis=0)) # on axis 0
 print(np.any(x < 6)) # check if any of elements in matrix follow condition
 print(np.all(x < 6)) #check if all the elements in matrix follows the condition 
+
+#using some boolean opperators 
+print(np.sum(np.bitwise_and(inches > 0.5, inches < 1))) 
+print(np.sum(~((inches <= 0.5) | (inches >=1))))
