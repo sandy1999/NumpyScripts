@@ -39,3 +39,8 @@ indices
 selection = X[indices] #fancy indexing 
 plt.scatter(X[:, 0], X[:, 1], alpha=0.3)
 plt.scatter(selection[:, 0], selection[:, 1],s=200);
+
+x = np.zeros(10)
+i = np.array([2,3,3,4,4,4])
+np.add.at(x,i,1)
+print(x)
