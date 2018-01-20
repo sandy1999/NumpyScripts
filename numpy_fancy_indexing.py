@@ -21,3 +21,8 @@ col = np.array([2,1,3])
 print(X[row,col])
 print(X[row[:,np.newaxis],col])
 print(row[:,np.newaxis]*col)
+
+print(X[2,[2,0,1]])
+print(X[1:,[2,0,1]]) #used slicing to index array 
+mask = np.array([1,0,1,0],dtype=bool)
+print(X[row[:,np.newaxis],mask])
