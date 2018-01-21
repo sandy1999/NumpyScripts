@@ -29,3 +29,8 @@ tp = np.dtype([('id','i8'),('mat','f8',(3,3))])
 X = np.zeros(1,dtype=tp)
 print(X) #print a complete array
 print(X['mat'][0]) #print an array with zero index and of mat property
+
+#Record Arrays 
+
+data_rec = data.view(np.recarray) #created an array with attributes
+print(data_rec.age) #accesing fields as attributes
