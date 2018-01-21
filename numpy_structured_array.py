@@ -19,3 +19,6 @@ data['name']=name
 data['age']=age
 data['weight']=weight
 print(data)
+
+print(data[2:]) #slicing data after index 2
+print(data[np.less(data['age'],20)]['name']) #printing name of people of age < 20
